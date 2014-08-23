@@ -34,6 +34,8 @@ public class EulerProject {
 		}
 
 		System.out.println("The answer to problem #2 is " + answer2);
+		System.out.println("Thanks for visiting");
+		
 	}
 	
 }
