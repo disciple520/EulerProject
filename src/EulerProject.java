@@ -4,7 +4,11 @@ import java.util.Scanner;
 public class EulerProject {
 
 	public static void main(String[] args){
+		
 		System.out.println("Euler Project Development Represent!\nWhich Euler Problem would you like the answer to?");
+
+		
+		System.out.println("Euler Project Represent!\nWhich Euler Problem would you like the answer to?");
 		Scanner myScanner = new Scanner(System.in);
 		//displays error multiple times if multiple words are typed
 		while (!myScanner.hasNextInt()) {
@@ -13,11 +17,8 @@ public class EulerProject {
 	    }
 	      int selectedProblem = myScanner.nextInt();
 	        System.out.println("The typed integer is " + selectedProblem);
+     
 	     
-	     
-		
-		
-		
 /*		
 		int answer1 = 0;
 		for (int i=1; i<1000; i++){
@@ -35,7 +36,9 @@ public class EulerProject {
 		}
 
 		System.out.println("The answer to problem #2 is " + answer2);
-*/	}
+		System.out.println("Thanks for visiting");
+*/		
+	}
 	
 }
 // Checking to see if a save needs to be made in order for git to know a file has been modified
