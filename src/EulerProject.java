@@ -5,7 +5,7 @@ public class EulerProject {
 
 	public static void main(String[] args){
 		
-		System.out.println("Euler Project Represent!");
+		System.out.println("Euler Master Project Represent!");
 /*		System.out.println("Euler Project Represent!\nWhich Euler Problem would you like the answer to?");
 		Scanner myScanner = new Scanner(System.in);
 		//displays error multiple times if multiple words are typed
