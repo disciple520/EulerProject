@@ -5,21 +5,22 @@ public class EulerProject {
 
 	public static void main(String[] args){
 		
-		System.out.println("Euler Project Development Represent!\nWhich Euler Problem would you like the answer to?");
-
+		System.out.println("Euler Project Represent!\n");
 		
-		System.out.println("Euler Project Represent!\nWhich Euler Problem would you like the answer to?");
-		Scanner myScanner = new Scanner(System.in);
-		//displays error multiple times if multiple words are typed
-		while (!myScanner.hasNextInt()) {
-	        System.out.println("Please enter a valid number");
-	        myScanner.next();
-	    }
-	      int selectedProblem = myScanner.nextInt();
-	        System.out.println("The typed integer is " + selectedProblem);
+		int problemNumber = PromptForProblemNumber();
+		switch (problemNumber) {
+			case 1: CalculateAndDisplayAnswerOne();
+					break;
+			case 2: CalculateAndDisplayAnswerTwo();
+					break;
+			default: System.out.println("I haven't solved that problem yet!");
+					break;
+		}
+		System.out.println("\nThanks for visiting!");
+	}
      
-	     
-/*		
+		
+	public static void CalculateAndDisplayAnswerOne(){
 		int answer1 = 0;
 		for (int i=1; i<1000; i++){
 			if (i%3 == 0 || i%5 == 0) {
@@ -27,6 +28,9 @@ public class EulerProject {
 			}
 		}
 		System.out.println("The answer to problem #1 is " + answer1);
+	}
+	
+	public static void CalculateAndDisplayAnswerTwo(){
 		int answer2 = 0;
 		for (int i=0, j=1, k=0; k<4000001; i=j, j=k ){
 			k = j + i;
@@ -34,11 +38,24 @@ public class EulerProject {
 				answer2 += k;
 			}
 		}
-
 		System.out.println("The answer to problem #2 is " + answer2);
-		System.out.println("Thanks for visiting");
-*/		
 	}
+		
+	
+	
+	public static int PromptForProblemNumber(){
+		System.out.println("Which Euler Problem would you like the answer to?");
+		Scanner numberScanner = new Scanner(System.in);	
+		// Scanner prompts for number until a valid number is entered
+		while (!numberScanner.hasNextInt()) {
+	       System.out.println("Please enter a valid number");
+	       numberScanner.nextInt();
+	    }
+		int selectedProblem = numberScanner.nextInt();
+	    numberScanner.close();
+	    return selectedProblem;
+	}
+	
 	
 }
 // Checking to see if a save needs to be made in order for git to know a file has been modified
