@@ -5,9 +5,13 @@ public class EulerProject {
 
 	public static void main(String[] args){
 		
+		ClearTerminalScreen();
 		System.out.println("Euler Project Represent!\n");
 		
 		int problemNumber = PromptForProblemNumber();
+		
+		ClearTerminalScreen();
+        
 		switch (problemNumber) {
 			case 1: CalculateAndDisplayAnswerOne();
 					break;
@@ -16,7 +20,7 @@ public class EulerProject {
 			default: System.out.println("I haven't solved that problem yet!");
 					break;
 		}
-		System.out.println("\nThanks for visiting!");
+		System.out.println("\nThanks for visiting!\n\n\n\n");
 	}
      
 		
@@ -41,7 +45,12 @@ public class EulerProject {
 		System.out.println("The answer to problem #2 is " + answer2);
 	}
 		
-	
+	public static void ClearTerminalScreen() {
+		final String ANSI_CLS = "\u001b[2J";
+        final String ANSI_HOME = "\u001b[H";
+        System.out.print(ANSI_CLS + ANSI_HOME);
+        System.out.flush();
+	}
 	
 	public static int PromptForProblemNumber(){
 		System.out.println("Which Euler Problem would you like the answer to?");
