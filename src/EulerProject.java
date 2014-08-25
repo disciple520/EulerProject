@@ -46,10 +46,12 @@ public class EulerProject {
 	}
 		
 	public static void ClearTerminalScreen() {
-		final String ANSI_CLS = "\u001b[2J";
-        final String ANSI_HOME = "\u001b[H";
-        System.out.print(ANSI_CLS + ANSI_HOME);
-        System.out.flush();
+		// This clears the terminal screen.
+		// I may get rid of it as when ran in Eclipse it prints out garbage characters
+		//final String ANSI_CLS = "\u001b[2J";
+        //final String ANSI_HOME = "\u001b[H";
+        //System.out.print(ANSI_CLS + ANSI_HOME);
+        //System.out.flush();
 	}
 	
 	public static int PromptForProblemNumber(){
@@ -57,8 +59,8 @@ public class EulerProject {
 		Scanner numberScanner = new Scanner(System.in);	
 		// Scanner prompts for number until a valid number is entered
 		while (!numberScanner.hasNextInt()) {
-	       System.out.println("Please enter a valid number");
-	       numberScanner.nextLine();
+	        System.out.println("Please enter a valid number");
+	        numberScanner.nextLine();
 	    }
 		int selectedProblem = numberScanner.nextInt();
 	    numberScanner.close();
@@ -67,4 +69,3 @@ public class EulerProject {
 	
 	
 }
-// Checking to see if a save needs to be made in order for git to know a file has been modified
