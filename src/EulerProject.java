@@ -49,7 +49,7 @@ public class EulerProject {
 		// Scanner prompts for number until a valid number is entered
 		while (!numberScanner.hasNextInt()) {
 	       System.out.println("Please enter a valid number");
-	       numberScanner.nextInt();
+	       numberScanner.nextLine();
 	    }
 		int selectedProblem = numberScanner.nextInt();
 	    numberScanner.close();
