@@ -11,27 +11,30 @@ public class EulerProject {
 		int problemNumber = PromptForProblemNumber();
 		
 		ClearTerminalScreen();
+        int answer = -1;
         
 		switch (problemNumber) {
-			case 1: CalculateAndDisplayAnswerOne();
+			case 1: answer = CalculateAndDisplayAnswerOne();
 					break;
 			case 2: CalculateAndDisplayAnswerTwo();
 					break;
 			default: System.out.println("I haven't solved that problem yet!");
 					break;
 		}
-		System.out.println("\nThanks for visiting!\n\n\n\n");
+		System.out.println("The answer to Problem #" + problemNumber + " is " + answer);
+		System.out.println("\nThanks for visiting!");
 	}
      
 		
-	public static void CalculateAndDisplayAnswerOne(){
+	public static int CalculateAndDisplayAnswerOne(){
 		int answer1 = 0;
 		for (int i=1; i<1000; i++){
 			if (i%3 == 0 || i%5 == 0) {
 				answer1 += i;
 			}
 		}
-		System.out.println("The answer to problem #1 is " + answer1);
+		return answer1;
+		//System.out.println("The answer to problem #1 is " + answer1);
 	}
 	
 	public static void CalculateAndDisplayAnswerTwo(){
